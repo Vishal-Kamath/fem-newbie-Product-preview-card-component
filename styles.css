@@ -1,0 +1,48 @@
+:root {
+  --clr-primary-100: hsl(30, 38%, 92%);
+  --clr-primary-900: hsl(158, 36%, 37%);
+
+  --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-700: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'Fraunces', serif;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-14: 0.875em;
+} 
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-primary-100);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  background-color: var(--clr-neutral-100);
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.even-column {
+  display: flex;
+}
+
+.content {
+  padding: 1em;
+}
