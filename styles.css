@@ -23,6 +23,9 @@
 
 body {
   background-color: var(--clr-primary-100);
+  font-family: var(--ff-primary);
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-14);
 }
 
 .container {
@@ -30,7 +33,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 600px;
   background-color: var(--clr-neutral-100);
   border: 0;
   border-radius: 10px;
@@ -43,6 +46,74 @@ body {
   display: flex;
 }
 
-.content {
-  padding: 1em;
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
+
+.content {
+  padding: 2em;
+}
+
+.heading {
+  font-weight: var(--fw-medium);
+  letter-spacing: .5em;
+  font-size: .75em;
+}
+
+.name {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-900);
+  font-size: 2.4em;
+  line-height: 1em;
+  padding: .5em 0;
+}
+
+.description {
+  margin: .7em 0;
+  line-height: 1.5em;
+}
+
+
+.price {
+  display: flex;
+  align-items: center;
+  padding: 1.75em 0;
+  gap: 1.5em;
+}
+
+.price div:first-child {
+  color: var(--clr-primary-900);
+  font-family: var(--ff-secondary);
+  font-size: 2.25em;
+}
+
+
+
+.button {
+  display: flex;
+  width: 100%;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-900);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  padding: 1.25em;
+  justify-content: center;
+  text-align: center;
+  border: 0;
+  border-radius: .5em;
+}
+
+.button-text {
+  margin-left: .7em;
+  padding: 0;
+} 
