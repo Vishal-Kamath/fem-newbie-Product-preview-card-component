@@ -13,11 +13,16 @@
   --fw-bold: 700;
 
   --fs-14: 0.875em;
+  --fs-heading: 0.85em;
+
+  --padding-content: 1.5em;
+  --margin-name: 0.4em 0;
+  --margin-desc: 1em 0;
+  --margin-price: 1.75em 0;
 } 
 
-*,
-*::after,
-*::before {
+
+* {
   box-sizing: border-box;
 }
 
@@ -33,7 +38,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
   background-color: var(--clr-neutral-100);
   border: 0;
   border-radius: 10px;
@@ -42,31 +46,18 @@ body {
   margin: 0;
 }
 
-.even-column {
-  display: flex;
-}
-
-.visually-hidden {
-  position: absolute;
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+.image-container img:first-child {
+  display: none;
 }
 
 .content {
-  padding: 2em;
+  padding: var(--padding-content);
 }
 
 .heading {
   font-weight: var(--fw-medium);
   letter-spacing: .5em;
-  font-size: .75em;
+  font-size: var(--fs-heading);
 }
 
 .name {
@@ -75,11 +66,11 @@ body {
   color: var(--clr-neutral-900);
   font-size: 2.4em;
   line-height: 1em;
-  padding: .5em 0;
+  margin: var(--margin-name);
 }
 
 .description {
-  margin: .7em 0;
+  margin: var(--margin-desc);
   line-height: 1.5em;
 }
 
@@ -87,7 +78,7 @@ body {
 .price {
   display: flex;
   align-items: center;
-  padding: 1.75em 0;
+  margin: var(--margin-price);
   gap: 1.5em;
 }
 
@@ -96,8 +87,6 @@ body {
   font-family: var(--ff-secondary);
   font-size: 2.25em;
 }
-
-
 
 .button {
   display: flex;
@@ -110,10 +99,49 @@ body {
   justify-content: center;
   text-align: center;
   border: 0;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 
 .button-text {
-  margin-left: .7em;
+  margin-left: 0.7em;
   padding: 0;
-} 
+}  
+
+
+@media (min-width: 650px) {
+  :root {
+    --fs-heading: 0.75em;
+  
+    --padding-content: 2em;
+    --margin-name: 0.7em 0;
+    --margin-desc: 0.7em 0;
+    --margin-price: 1.75em 0;
+  } 
+
+  .container {
+    width: 600px;
+  }
+
+  .even-column {
+    display: flex;
+  }
+
+  .image-container {
+    height: 450px;
+  }
+
+  .image-container img:last-child {
+    display: none;
+  }
+
+  .image-container img:first-child {
+    display: block;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
